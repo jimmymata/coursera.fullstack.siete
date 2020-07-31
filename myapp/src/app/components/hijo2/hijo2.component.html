@@ -1,0 +1,24 @@
+<h3>Agregar un nuevo producto</h3>
+
+<form [formGroup]="formGroup" (ngSubmit)="onAgregar()">
+
+  <div class="form-group">
+    <label for="nombreProducto">Producto</label>
+    <input formControlName="nombreProducto" type="text" class="form-control" id="nombreProducto" aria-describedby="nombreProductoHelp" #nombreProducto>
+    <div class="alert alert-info m-0" role="alert" *ngIf="formGroup.get('nombreProducto').errors  && formGroup.get('nombreProducto').touched">
+      <p class="m-0" *ngIf="formGroup.get('nombreProducto').hasError('required')">Nombre de producto es obligatorio.</p>
+      <p class="m-0" *ngIf="formGroup.get('nombreProducto').hasError('minlength')">Nombre del producto debe ser de 10 caracteres mínimo.</p>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="cantidadProducto">Cantidad</label>
+    <input formControlName="cantidadProducto" type="number" class="form-control" id="cantidadProducto" aria-describedby="cantidadProductoHelp" #cantidadProducto>
+    <div class="alert alert-info m-0" role="alert" *ngIf="formGroup.get('cantidadProducto').errors  && formGroup.get('cantidadProducto').touched">
+      <p class="m-0" *ngIf="formGroup.get('cantidadProducto').hasError('negativo')">Cantidad de producto no puede ser negativo.</p>
+    </div>
+  </div>
+
+  <button [disabled]="formGroup.invalid" type="submit" class="btn btn-primary">Agregar</button>
+
+</form>

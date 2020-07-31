@@ -1,0 +1,10 @@
+<div class="">
+  <p class="m-0">Nombre: {{listaHijo.nombre}}</p>
+  <p class="m-0">Cantidad: {{listaHijo.cantidad}}</p>
+  <div class="row">
+    <button type="button" class="btn btn-primary ml-3" (click)="increment()"><i class="fa fa-hand-o-up" aria-hidden="true"></i></button>
+    <button type="button" class="btn btn-primary ml-3" (click)="decrement()"><i class="fa fa-hand-o-down" aria-hidden="true"></i></button>
+    <button type="button" class="btn btn-warning ml-3" (click)="reset()"><i class="fa fa-eraser" aria-hidden="true"></i></button>
+    <button type="button" class="btn btn-danger ml-3 d-none"  (click)="delete()">Eliminar</button>
+  </div>
+</div>

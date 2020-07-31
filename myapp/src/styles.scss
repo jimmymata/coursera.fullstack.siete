@@ -1,0 +1,124 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+// bootstrap and font-awesome icons imports are into angular.json file
+
+
+// display size: 599 or minus (extra small devices)
+@mixin size_599_landscape {
+  @media screen and (max-width: 599px) and (orientation: landscape) {
+    @content;
+  }
+}
+// display size: 600x800
+@mixin size_600 {
+  @media screen and (min-width: 600px) {
+    @content;
+  }
+}
+// display size: 1024x576 / 1024x768 / 1024x1366
+@mixin size_1024 {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+
+// general
+body {
+  overflow-x: hidden;
+}
+.alert {
+  font-size: 12px;
+}
+// header
+.header {
+	position: fixed;
+	z-index: 1;
+}
+.jumbotron {
+	margin: 0;
+	padding: 0;
+}
+.jumbotron-inner {
+	justify-content: flex-end;
+}
+.logo {
+	height: auto;
+	//left: 1rem;
+	//position: absolute;
+	//top: 0.75rem;
+	width: 5rem;
+}
+.title {
+	font-size: 1rem;
+	width: 50%;
+}
+// content
+.content-inner {
+  padding-top: 6rem;
+}
+// footer
+.footer {
+  color: #fff;
+  justify-content: space-evenly;
+  & .link{
+    color: #fff;
+    &:hover{
+      color: #000;
+    }
+  }
+  &-info {
+    width: 100%;
+  }
+}
+
+
+/* Breakpoints */
+ 
+// display size: 599 or minus (extra small devices)
+@include size_599_landscape {
+  // header
+  .jumbotron {
+		padding: 1rem 0;
+	}
+}
+// display size: 600x800
+@include size_600 {
+  // header
+  .jumbotron {
+		padding: 1rem 0;
+	}
+	.jumbotron-inner {
+		justify-content: center;
+  }
+  // content
+  .card-columns {
+    column-count: 2;
+  }
+}
+// display size: 1024x576 / 1024x768 / 1024x1366
+@include size_1024 {
+  // header
+	.title {
+		font-size: 2rem;
+		width: 100%;
+  }
+  // content
+  .content-inner {
+    margin: 0 auto;
+    width: 80%;
+  }
+  .card-columns {
+    column-count: 3;
+  }
+  // footer
+	.footer-info {
+		width: 33.333333%;
+	}
+  .footer {
+    &-info {
+      width: 33.333333%;
+    }
+	}
+}
