@@ -9,7 +9,7 @@ myapp/bazel-out
 
 # dependencies
 myapp/node_modules
-myapi/node_modules
+myexpress/node_modules
 
 # profiling files
 chrome-profiler-events*.json
