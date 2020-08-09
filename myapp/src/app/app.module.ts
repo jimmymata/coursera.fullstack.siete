@@ -14,6 +14,9 @@ import { CopyrightComponent } from './components/copyright/copyright.component';
 import { SocialmediaComponent } from './components/socialmedia/socialmedia.component';
 import { ProductComponent } from './components/product/product.component';
 
+import { ProductService } from "./services/product.service";
+import { HttpClientModule } from "@angular/common/http";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,8 +33,11 @@ import { ProductComponent } from './components/product/product.component';
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode
     }),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ProductService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

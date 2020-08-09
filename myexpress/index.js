@@ -1,19 +1,19 @@
 // var declaration
 data = [
   {
-    nombre: 'Producto A',
-    estado: 'Disponible',
-    cantidad: 100
+    name: 'Producto A',
+    qty: 100,
+    available: 'Si'
   },
   {
-    nombre: 'Producto B',
-    estado: 'Disponible',
-    cantidad: 150
+    name: 'Producto B',
+    qty: 150,
+    available: 'Si'
   },
   {
-    nombre: 'Producto C',
-    estado: 'Disponible',
-    cantidad: 200
+    name: 'Producto C',
+    qty: 200,
+    available: 'Si'
   }
 ]
 

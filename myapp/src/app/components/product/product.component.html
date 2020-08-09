@@ -1,1 +1,7 @@
-<p>product works!</p>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let item of data">{{ item.name }}</li>
+</ul>
+
+<div class="alert alert-danger text-center mt-4" role="alert" *ngIf="errorMsg">
+  {{ errorMsg }}
+</div>
