@@ -1,5 +1,21 @@
 // var declaration
-data = ['a','b','c']
+data = [
+  {
+    nombre: 'Producto A',
+    estado: 'Disponible',
+    cantidad: 100
+  },
+  {
+    nombre: 'Producto B',
+    estado: 'Disponible',
+    cantidad: 150
+  },
+  {
+    nombre: 'Producto C',
+    estado: 'Disponible',
+    cantidad: 200
+  }
+]
 
 // const declaration
 const cors    = require('cors')
