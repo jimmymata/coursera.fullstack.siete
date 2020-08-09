@@ -12,12 +12,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { CopyrightComponent } from './components/copyright/copyright.component';
 import { SocialmediaComponent } from './components/socialmedia/socialmedia.component';
+import { ProductComponent } from './components/product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CopyrightComponent,
     SocialmediaComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
