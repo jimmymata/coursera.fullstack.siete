@@ -15,7 +15,9 @@ import { SocialmediaComponent } from './components/socialmedia/socialmedia.compo
 import { ProductComponent } from './components/product/product.component';
 
 import { ProductService } from "./services/product.service";
+import { LoginService } from "./services/login.service";
 import { HttpClientModule } from "@angular/common/http";
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { HttpClientModule } from "@angular/common/http";
     CopyrightComponent,
     SocialmediaComponent,
     ProductComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import { HttpClientModule } from "@angular/common/http";
     HttpClientModule
   ],
   providers: [
-    ProductService
+    ProductService,
+    LoginService
   ],
   bootstrap: [AppComponent]
 })
